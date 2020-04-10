@@ -18,8 +18,3 @@ for j in range(1000):
     print('my_gcd', my_gcd(a, b))
     i += 1
     sleep(2)
-
-
-
-
-

@@ -22,6 +22,3 @@ def close(number_one, number_two, number_three):
         a = False  # Set intermediate variable 'a' False
 
     return a
-
-
-

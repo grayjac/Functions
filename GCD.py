@@ -26,12 +26,3 @@ def gcd(a, b):
             break
 
     return ints[n]
-
-
-
-
-
-
-
-
-

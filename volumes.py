@@ -46,5 +46,4 @@ def torus_volume(inner_radius, outer_radius):
         raise ValueError
 
     # If the program runs to here and the argument are valid, calculate and return the torus volume.
-    return 2 * pi ** 2 * inner_radius * (outer_radius - inner_radius)
-
+    return (pi ** 2 / 4) * (outer_radius + inner_radius) * (outer_radius - inner_radius) ** 2

@@ -21,4 +21,3 @@ def letter_count(text, letter):
             n += 1
 
     return n
-

@@ -6,6 +6,12 @@
 # Last Edit: 4/6/2020
 
 
+from math import gcd as math_gcd
+from random import seed
+from random import random
+from random import randrange
+
+
 def gcd(a, b):
     """
     Calculates and returns the greatest common divisor of two numbers a and b.
@@ -28,6 +34,14 @@ def gcd(a, b):
     return ints[n]
 
 
+# Testing GCD function
+if __name__ == "__main__":
+    seed()  #generate random seed off system clock
+
+    for i in range(0, 999):
+        a = randrange(0, 99999)
+        b = randrange(0, 99999)
+        self.assetEqual(a, b)  # Compares two integers, returns value error if false
 
 
 

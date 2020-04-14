@@ -1,10 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
 # ME499-S20 Python Lab 1 Problem 4
 # Programmer: Jacob Gray
 # Last Edit: 4/6/2020
 
+
+from math import gcd as math_gcd
+
+a = 24
+b = 1023
 
 def gcd(a, b):
     """
@@ -21,8 +26,11 @@ def gcd(a, b):
         ints.append(rem)
         n += 1
         rem = ints[n - 1] % ints[n]
-        ints.append(rem)
         if rem == 0:
             break
 
     return ints[n]
+
+
+print('math_gcd =', math_gcd(a, b))
+print('my_gcd =', gcd(a, b))

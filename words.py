@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
 # ME499-S20 Python Lab 1 Problem 2

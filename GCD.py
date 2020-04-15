@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 
 # ME499-S20 Python Lab 1 Problem 4
@@ -7,9 +7,10 @@
 
 
 from math import gcd as math_gcd
+from random import seed
+from random import random
+from random import randrange
 
-a = 24
-b = 1023
 
 def gcd(a, b):
     """
@@ -26,11 +27,25 @@ def gcd(a, b):
         ints.append(rem)
         n += 1
         rem = ints[n - 1] % ints[n]
+        ints.append(rem)
         if rem == 0:
             break
 
     return ints[n]
 
 
-print('math_gcd =', math_gcd(a, b))
-print('my_gcd =', gcd(a, b))
+# Testing GCD function
+if __name__ == "__main__":
+    seed()  #generate random seed off system clock
+
+    for i in range(0, 999):
+        a = randrange(0, 99999)
+        b = randrange(0, 99999)
+        self.assetEqual(a, b)  # Compares two integers, returns value error if false
+
+
+
+
+
+
+

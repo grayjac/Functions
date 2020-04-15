@@ -2,7 +2,7 @@
 
 
 from math import gcd as math_gcd  # Import gcd from math library
-from GCD import gcd as my_gcd  # Import my gcd program from GCD
+from gcd import gcd as my_gcd  # Import my gcd program from GCD
 from random import seed
 from random import randint
 from time import sleep

@@ -7,9 +7,7 @@
 
 
 from math import gcd as math_gcd
-from random import seed
-from random import random
-from random import randrange
+from random import randint
 
 
 def gcd(a, b):
@@ -27,25 +25,28 @@ def gcd(a, b):
         ints.append(rem)
         n += 1
         rem = ints[n - 1] % ints[n]
-        ints.append(rem)
         if rem == 0:
             break
 
     return ints[n]
 
 
-# Testing GCD function
+def compare_test(a, b):
+    """
+    Compares integers a and b and raises ValueError if they're not equal.
+    :param a: Integer.
+    :param b: Integer.
+    :return: Raises ValueError if integers a and b are not equal, does nothing otherwise.
+    """
+    if a != b:
+        raise ValueError
+
+
+# Testing my GCD function thru 1000 pairs of random integers of range 1 thru 10,000
 if __name__ == "__main__":
-    seed()  #generate random seed off system clock
-
     for i in range(0, 999):
-        a = randrange(0, 99999)
-        b = randrange(0, 99999)
-        self.assetEqual(a, b)  # Compares two integers, returns value error if false
-
-
-
-
-
-
-
+        rand_integer_a = randint(0, 9999)
+        rand_integer_b = randint(0, 9999)
+        math_gcd_test = math_gcd(rand_integer_a, rand_integer_b)  # GCD function from math module
+        my_gcd_test = gcd(rand_integer_a, rand_integer_b)  # My GCD function
+        compare_test(math_gcd_test, my_gcd_test)  # Comparing two GCD functions

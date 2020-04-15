@@ -40,9 +40,7 @@ def torus_volume(inner_radius, outer_radius):
 
     # If the inner radius or outer radius is negative, then raise a ValueError. This will force the program to stop,
     # and the user to fix the argument parameters.
-    if inner_radius < 0:
-        raise ValueError
-    elif outer_radius <= inner_radius:
+    if inner_radius < 0 or outer_radius <= inner_radius:
         raise ValueError
 
     # If the program runs to here and the argument are valid, calculate and return the torus volume.

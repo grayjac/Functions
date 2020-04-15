@@ -18,10 +18,8 @@ def gcd(a, b):
     :param b: Integer b.
     :return: Greatest common divisor of integers a and b.
     """
-    if not isinstance(a, int):
-        raise TypeError  # Raises TypeError if a isn't an integer
-    elif not isinstance(b, int):
-        raise TypeError  # Raises TypeError if b isn't an integer
+    if not isinstance(a, int) or not isinstance(b, int):
+        raise TypeError  # Raises TypeError if a or b isn't an integer
 
     n = 1  # Intermediate variable for indexing through list of integers
     rem = a % b  # Remainder of a / b

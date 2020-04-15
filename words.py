@@ -13,6 +13,8 @@ def letter_count(text, letter):
     :param letter: String of one letter.
     :return: Number of letter occurrences in the text.
     """
+    if not isinstance(text, str) or not isinstance(letter, str):
+        raise TypeError  # Raises TypeError if text or letter isn't a string
 
     n = 0  # Setting number of letter occurrences in text to zero
 
